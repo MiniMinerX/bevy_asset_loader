@@ -22,7 +22,7 @@ standard_dynamic_assets = ["dep:bevy_common_assets", "dep:serde"]
 progress_tracking = ["dep:iyes_progress"]
 
 [dependencies]
-bevy = { version = "0.17.0-dev", git = "https://github.com/bevyengine/bevy.git", default-features = false, features = [
+bevy = { version = "0.17.3", default-features = false, features = [
     "bevy_asset",
     "bevy_state",
     "bevy_log",
@@ -31,23 +31,17 @@ bevy_asset_loader_derive = { version = "0.23.0", path = "../bevy_asset_loader_de
 anyhow = "1"
 path-slash = "0.2"
 
-#bevy_common_assets = { version = "0.13.0", features = [
-#    "ron",
-#], optional = true }
-bevy_common_assets = { git = "https://github.com/MiniMinerX/bevy_common_assets", branch = "dev-0.17", features = [
+bevy_common_assets = { version = "0.14", features = [
     "ron",
 ], optional = true }
 serde = { version = "1", optional = true }
 iyes_progress = { version = "0.14.0", optional = true }
 
 [dev-dependencies]
-bevy = { version = "0.17.0-dev", git = "https://github.com/bevyengine/bevy.git", features = ["vorbis"] }
+bevy = { version = "0.17.3", features = ["vorbis"] }
 anyhow = "1"
 iyes_progress = { version = "0.14.0" }
-#bevy_common_assets = { version = "0.13.0", features = ["ron"] }
-bevy_common_assets = { git = "https://github.com/MiniMinerX/bevy_common_assets", branch = "dev-0.17", features = [
-    "ron",
-] }
+bevy_common_assets = { version = "0.14.0", features = ["ron"] }
 serde = { version = "1" }
 ron = "0.10"
 trybuild = { version = "1.0" }
